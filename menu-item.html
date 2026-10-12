@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dish — LUMIÈRE Bistro</title>
+    <meta
+      name="description"
+      content="Dish detail — ingredients, allergens, wine pairing and related plates from the LUMIÈRE Bistro kitchen."
+    />
+    <meta name="theme-color" content="#20362b" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="header-top">
+        <div class="container header-top-inner">
+          <p class="header-note">
+            Dinner Tue – Sat from 18:00 · Reservations
+            <a href="tel:+15550100187">+1 (555) 010-0187</a>
+          </p>
+          <nav class="utility-nav" aria-label="Account and cart">
+            <a class="utility-link" href="order-tracking.html">Track order</a>
+            <a class="utility-link" href="login.html" data-nav-account
+              >Sign in</a
+            >
+            <a class="utility-link" href="wishlist.html" data-nav-wishlist
+              >Saved <span class="count-badge" data-wishlist-count>0</span></a
+            >
+            <a class="utility-link" href="cart.html" data-nav-cart
+              >Cart <span class="count-badge" data-cart-count>0</span></a
+            >
+          </nav>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="container header-main-inner">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">L</span>
+            <span class="brand-text"
+              >Lumière<span class="brand-sub">Bistro</span></span
+            >
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="visually-hidden">Toggle navigation</span>
+          </button>
+          <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <ul class="nav-list">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li>
+                <a class="nav-link" href="menu.html" aria-current="page"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a class="nav-link" href="order-online.html">Order Online</a>
+              </li>
+              <li>
+                <a class="nav-link" href="reservations.html">Reservations</a>
+              </li>
+              <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+              <li><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-more">
+                <details class="nav-details">
+                  <summary class="nav-link">More</summary>
+                  <ul class="nav-dropdown">
+                    <li><a href="special-offers.html">Special Offers</a></li>
+                    <li><a href="seasonal-menu.html">Seasonal Menu</a></li>
+                    <li><a href="dietary-menu.html">Dietary Menu</a></li>
+                    <li><a href="chef-specials.html">Chef's Specials</a></li>
+                    <li><a href="private-dining.html">Private Dining</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="catering.html">Catering</a></li>
+                    <li><a href="gift-cards.html">Gift Cards</a></li>
+                    <li><a href="loyalty.html">Lumière Circle</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <!--
+      Phase 2: JavaScript reads the dish ID from the URL query string (?id=…)
+      and populates this page. Elements marked data-menu-item-* are the hooks.
+      Static content below shows the default dish (truffle-risotto).
+    -->
+      <section class="page-header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li aria-current="page" data-menu-item-breadcrumb>
+                Black Truffle Risotto
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="Dish details">
+        <div class="container">
+          <article
+            class="dish-detail"
+            data-menu-item
+            data-menu-item-id="truffle-risotto"
+            data-dish-id="truffle-risotto"
+          >
+            <div class="dish-detail-layout">
+              <div class="dish-detail-gallery" data-menu-item-gallery>
+                <img
+                  class="dish-detail-image"
+                  data-menu-item-image
+                  src="C:\Users\Dell\Desktop\lumiere-bistro\assets\images\black-truffle-risotto.jpg"
+                  alt="Black truffle risotto finished with shaved truffle and parmesan"
+                  width="1200"
+                  height="900"
+                />
+                <div class="dish-detail-thumbs">
+                  <button
+                    class="dish-thumb"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-src="https://picsum.photos/seed/lumiere-truffle-risotto/1600/1200.jpg"
+                    data-lightbox-caption="Black Truffle Risotto — plated"
+                  >
+                    <img
+                      src="C:\Users\Dell\Desktop\lumiere-bistro\assets\images\black-truffle-risotto-fresh-ingredients.jpg"
+                      alt=""
+                      width="300"
+                      height="225"
+                      loading="lazy"
+                    />
+                    <span class="visually-hidden"
+                      >Enlarge plated dish photo</span
+                    >
+                  </button>
+                  <button
+                    class="dish-thumb"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-src="https://picsum.photos/seed/lumiere-truffle-kitchen/1600/1200.jpg"
+                    data-lightbox-caption="Truffle being shaved at the pass"
+                  >
+                    <img
+                      src="C:\Users\Dell\Desktop\lumiere-bistro\assets\images\black-truffle-risotto-ingredients.jpg"
+                      alt=""
+                      width="300"
+                      height="225"
+                      loading="lazy"
+                    />
+                    <span class="visually-hidden">Enlarge kitchen photo</span>
+                  </button>
+                  <button
+                    class="dish-thumb"
+                    type="button"
+                    data-lightbox-trigger
+                    data-lightbox-src="https://picsum.photos/seed/lumiere-truffle-ingredients/1600/1200.jpg"
+                    data-lightbox-caption="Mise en place — carnaroli, porcini, truffle"
+                  >
+                    <img
+                      src="C:\Users\Dell\Desktop\lumiere-bistro\assets\images\black-truffle-risotto-preparation.jpg"
+                      alt=""
+                      width="300"
+                      height="225"
+                      loading="lazy"
+                    />
+                    <span class="visually-hidden"
+                      >Enlarge ingredients photo</span
+                    >
+                  </button>
+                </div>
+              </div>
+
+              <div class="dish-detail-info">
+                <p class="eyebrow">Mains · Autumn card</p>
+                <h1 class="page-title" data-menu-item-title>
+                  Black Truffle Risotto
+                </h1>
+                <p class="dish-detail-price">
+                  <span class="visually-hidden">Price: </span
+                  ><span data-menu-item-price>27.00</span>
+                </p>
+                <p class="dish-detail-desc" data-menu-item-desc>
+                  Carnaroli rice stirred to order with porcini butter and aged
+                  parmesan, finished at the pass with shaved black truffle and a
+                  thread of chive oil. Our most-ordered main three seasons
+                  running.
+                </p>
+
+                <ul
+                  class="dish-detail-tags"
+                  aria-label="Dietary tags"
+                  data-menu-item-tags
+                >
+                  <li class="tag tag--veg">Vegetarian</li>
+                  <li class="tag tag--gf">Gluten-free</li>
+                  <li class="tag tag--chef">Chef's pick</li>
+                </ul>
+
+                <div class="dish-detail-order">
+                  <div class="quantity" data-quantity-selector>
+                    <button
+                      class="quantity-btn"
+                      type="button"
+                      data-quantity-step="minus"
+                      aria-label="Decrease quantity"
+                    >
+                      −
+                    </button>
+                    <input
+                      class="quantity-input"
+                      type="number"
+                      data-quantity-input
+                      value="1"
+                      min="1"
+                      max="20"
+                      inputmode="numeric"
+                      aria-label="Quantity"
+                    />
+                    <button
+                      class="quantity-btn"
+                      type="button"
+                      data-quantity-step="plus"
+                      aria-label="Increase quantity"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    class="btn btn--primary btn--large"
+                    type="button"
+                    data-add-to-cart="truffle-risotto"
+                    data-dish-name="Black Truffle Risotto"
+                    data-dish-price="27.00"
+                    data-uses-quantity-input
+                  >
+                    Add to cart
+                  </button>
+                  <button
+                    class="btn btn--outline"
+                    type="button"
+                    data-add-to-wishlist="truffle-risotto"
+                    data-dish-name="Black Truffle Risotto"
+                  >
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      />
+                    </svg>
+                    Save for later
+                  </button>
+                </div>
+
+                <div class="dish-detail-accordions">
+                  <details class="accordion" data-menu-item-ingredients>
+                    <summary class="accordion-summary">Ingredients</summary>
+                    <div class="accordion-body">
+                      <p>
+                        Carnaroli rice, porcini mushrooms, vegetable stock,
+                        porcini butter, aged parmesan (24 months), shallot,
+                        white wine, black truffle, chive oil, sea salt.
+                      </p>
+                    </div>
+                  </details>
+                  <details class="accordion" data-menu-item-allergens>
+                    <summary class="accordion-summary">Allergens</summary>
+                    <div class="accordion-body">
+                      <p>
+                        Contains: <strong>milk (butter, parmesan)</strong>,
+                        <strong>sulphites (white wine)</strong>. Prepared in a
+                        kitchen that handles gluten, nuts, shellfish and egg.
+                        Tell your server about any allergy and we will adapt the
+                        dish.
+                      </p>
+                    </div>
+                  </details>
+                  <details class="accordion" data-menu-item-pairing>
+                    <summary class="accordion-summary">
+                      Sommelier's pairing
+                    </summary>
+                    <div class="accordion-body">
+                      <p>
+                        Marc pours a Savagnin from the Jura alongside this dish
+                        — nutty, saline, exactly right against the porcini. By
+                        the glass or as part of the
+                        <a href="seasonal-menu.html">autumn pairing flight</a>.
+                      </p>
+                    </div>
+                  </details>
+                  <details class="accordion" data-menu-item-nutrition>
+                    <summary class="accordion-summary">
+                      Preparation &amp; nutrition
+                    </summary>
+                    <div class="accordion-body">
+                      <p>
+                        Cooked to order (about 18 minutes). Approximately 640
+                        kcal per serving. Vegetarian rennet used in the parmesan
+                        style served here; ask us for the fully plant-based
+                        version — it is very good.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-labelledby="related-title">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Goes well with</p>
+            <h2 class="section-title" id="related-title">
+              Plates the kitchen suggests
+            </h2>
+          </div>
+          <div class="grid grid--3 dish-grid" data-related-dishes>
+            <article
+              class="dish-card"
+              data-dish-id="cedar-plank-salmon"
+              data-dish-category="mains"
+              data-dish-tags="gluten-free,dairy-free"
+            >
+              <div class="dish-card-media">
+                <img
+                  src="C:\Users\Dell\Desktop\lumiere-bistro\assets\images\honey-lacquered-duck-breast.jpg"
+                  alt="Honey-lacquered duck breast with roasted vegetables"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="dish-card-body">
+                <div class="dish-card-head">
+                  <h3 class="dish-card-title">
+                    <a href="menu-item.html?id=cedar-plank-salmon"
+                      >Cedar-Plank Salmon</a
+                    >
+                  </h3>
+                  <p class="dish-card-price">$32</p>
+                </div>
+                <p class="dish-card-desc">
+                  Day-boat salmon over cedar embers, charred lemon, fennel
+                  salad.
+                </p>
+                <ul class="dish-card-tags" aria-label="Dietary tags">
+                  <li class="tag tag--gf">Gluten-free</li>
+                </ul>
+                <div class="dish-card-actions">
+                  <button
+                    class="btn btn--primary btn--small"
+                    type="button"
+                    data-add-to-cart="cedar-plank-salmon"
+                    data-dish-name="Cedar-Plank Salmon"
+                    data-dish-price="32.00"
+                  >
+                    Add to cart
+                  </button>
+                  <button
+                    class="btn btn--icon"
+                    type="button"
+                    data-add-to-wishlist="cedar-plank-salmon"
+                    data-dish-name="Cedar-Plank Salmon"
+                    aria-label="Save Cedar-Plank Salmon to wishlist"
+                  >
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="dish-card"
+              data-dish-id="shortrib"
+              data-dish-category="mains"
+              data-dish-tags="dairy-free"
+            >
+              <div class="dish-card-media">
+                <img
+                  src="C:\Users\Dell\Desktop\lumiere-bistro\assets\images\twelve-hour-braised-short-rib.jpg"
+                  alt="Twelve-hour braised short rib with celeriac purée"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="dish-card-body">
+                <div class="dish-card-head">
+                  <h3 class="dish-card-title">
+                    <a href="menu-item.html?id=shortrib"
+                      >12-Hour Braised Short Rib</a
+                    >
+                  </h3>
+                  <p class="dish-card-price">$34</p>
+                </div>
+                <p class="dish-card-desc">
+                  Red wine braise, celeriac purée, gremolata.
+                </p>
+                <ul class="dish-card-tags" aria-label="Dietary tags">
+                  <li class="tag tag--df">Dairy-free</li>
+                </ul>
+                <div class="dish-card-actions">
+                  <button
+                    class="btn btn--primary btn--small"
+                    type="button"
+                    data-add-to-cart="shortrib"
+                    data-dish-name="12-Hour Braised Short Rib"
+                    data-dish-price="34.00"
+                  >
+                    Add to cart
+                  </button>
+                  <button
+                    class="btn btn--icon"
+                    type="button"
+                    data-add-to-wishlist="shortrib"
+                    data-dish-name="12-Hour Braised Short Rib"
+                    aria-label="Save 12-Hour Braised Short Rib to wishlist"
+                  >
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article
+              class="dish-card"
+              data-dish-id="saffron-linguine"
+              data-dish-category="mains"
+              data-dish-tags="vegetarian"
+            >
+              <div class="dish-card-media">
+                <img
+                  src="C:\Users\Dell\Desktop\lumiere-bistro\assets\images\saffron-squash-linguine.jpg"
+                  alt="Saffron and squash linguine with crispy sage"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="dish-card-body">
+                <div class="dish-card-head">
+                  <h3 class="dish-card-title">
+                    <a href="menu-item.html?id=saffron-linguine"
+                      >Saffron &amp; Squash Linguine</a
+                    >
+                  </h3>
+                  <p class="dish-card-price">$24</p>
+                </div>
+                <p class="dish-card-desc">
+                  Hand-cut linguine, roasted squash, saffron cream, crispy sage.
+                </p>
+                <ul class="dish-card-tags" aria-label="Dietary tags">
+                  <li class="tag tag--veg">Vegetarian</li>
+                </ul>
+                <div class="dish-card-actions">
+                  <button
+                    class="btn btn--primary btn--small"
+                    type="button"
+                    data-add-to-cart="saffron-linguine"
+                    data-dish-name="Saffron &amp; Squash Linguine"
+                    data-dish-price="24.00"
+                  >
+                    Add to cart
+                  </button>
+                  <button
+                    class="btn btn--icon"
+                    type="button"
+                    data-add-to-wishlist="saffron-linguine"
+                    data-dish-name="Saffron &amp; Squash Linguine"
+                    aria-label="Save Saffron and Squash Linguine to wishlist"
+                  >
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      height="18"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="section-more">
+            <a class="btn btn--outline" href="menu.html"
+              >Back to the full menu</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand--footer" href="index.html">
+              <span class="brand-mark" aria-hidden="true">L</span>
+              <span class="brand-text"
+                >Lumière<span class="brand-sub">Bistro</span></span
+              >
+            </a>
+            <p class="footer-tagline">
+              Seasonal cooking over open fire, a serious cellar, and hospitality
+              that lingers. A fictional bistro built for a front-end demo.
+            </p>
+            <ul class="footer-social" aria-label="Follow LUMIÈRE Bistro">
+              <li><a href="#" data-social-link="instagram">Instagram</a></li>
+              <li><a href="#" data-social-link="facebook">Facebook</a></li>
+              <li><a href="#" data-social-link="pinterest">Pinterest</a></li>
+            </ul>
+          </div>
+          <nav class="footer-col" aria-label="Explore">
+            <h2 class="footer-heading">Explore</h2>
+            <ul class="footer-list">
+              <li><a href="menu.html">Full menu</a></li>
+              <li><a href="order-online.html">Order online</a></li>
+              <li><a href="reservations.html">Reservations</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="special-offers.html">Special offers</a></li>
+              <li><a href="seasonal-menu.html">Seasonal menu</a></li>
+              <li><a href="dietary-menu.html">Dietary menu</a></li>
+              <li><a href="chef-specials.html">Chef's specials</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Services">
+            <h2 class="footer-heading">Services</h2>
+            <ul class="footer-list">
+              <li><a href="private-dining.html">Private dining</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="catering.html">Catering</a></li>
+              <li><a href="gift-cards.html">Gift cards</a></li>
+              <li><a href="loyalty.html">Lumière Circle</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="footer-col">
+            <h2 class="footer-heading">Visit</h2>
+            <address class="footer-contact">
+              <p>
+                48 Lantern Row<br />Harborfront Quarter<br />Alder Bay, AB 10214
+              </p>
+              <p>
+                <a href="tel:+15550100187">+1 (555) 010-0187</a><br /><a
+                  href="mailto:hello@lumierebistro.example"
+                  >hello@lumierebistro.example</a
+                >
+              </p>
+            </address>
+            <table class="hours-table hours-table--footer">
+              <tbody>
+                <tr>
+                  <th scope="row">Tue – Fri</th>
+                  <td>12:00 – 14:30 · 18:00 – 22:30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sat</th>
+                  <td>18:00 – 22:30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sun</th>
+                  <td>11:00 – 15:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mon</th>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav class="footer-col" aria-label="Company">
+            <h2 class="footer-heading">Company</h2>
+            <ul class="footer-list">
+              <li><a href="about.html">About us</a></li>
+              <li><a href="location.html">Find us</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="press.html">Press</a></li>
+              <li><a href="sustainability.html">Sustainability</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Account and legal">
+            <h2 class="footer-heading">Account &amp; legal</h2>
+            <ul class="footer-list">
+              <li><a href="login.html">Sign in</a></li>
+              <li><a href="register.html">Create account</a></li>
+              <li><a href="profile.html">My profile</a></li>
+              <li><a href="order-history.html">Order history</a></li>
+              <li><a href="order-tracking.html">Track an order</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of service</a></li>
+              <li><a href="refund-policy.html">Refund policy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-newsletter">
+          <div class="footer-newsletter-copy">
+            <h2 class="footer-heading">The Lumière Letter</h2>
+            <p>
+              Seasonal menus, chef's specials and first word on events. Once a
+              month — never more.
+            </p>
+          </div>
+          <form
+            class="footer-newsletter-form"
+            data-newsletter-form
+            action="#"
+            novalidate
+          >
+            <div class="form-group">
+              <label class="form-label visually-hidden" for="newsletter-email"
+                >Email address</label
+              >
+              <input
+                class="form-input"
+                type="email"
+                id="newsletter-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <button class="btn btn--light" type="submit">Subscribe</button>
+            <p class="form-hint" data-newsletter-message role="status"></p>
+          </form>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span data-year>2025</span> LUMIÈRE Bistro. All dishes, people and
+            addresses are fictional demo content.
+          </p>
+          <ul class="footer-legal">
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="refund-policy.html">Refunds</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="toast-container"
+      data-toast-container
+      role="status"
+      aria-live="polite"
+    ></div>
+    <!-- Phase 2: site JavaScript will be included here -->
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>

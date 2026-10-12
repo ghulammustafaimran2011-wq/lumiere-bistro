@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Track Your Order — LUMIÈRE Bistro</title>
+    <meta
+      name="description"
+      content="Track a LUMIÈRE Bistro order in real time — enter your order reference and email to see live status from kitchen to door. Demo data shown."
+    />
+    <meta name="theme-color" content="#20362b" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="header-top">
+        <div class="container header-top-inner">
+          <p class="header-note">
+            Dinner Tue – Sat from 18:00 · Reservations
+            <a href="tel:+15550100187">+1 (555) 010-0187</a>
+          </p>
+          <nav class="utility-nav" aria-label="Account and cart">
+            <a
+              class="utility-link"
+              href="order-tracking.html"
+              aria-current="page"
+              >Track order</a
+            >
+            <a class="utility-link" href="login.html" data-nav-account
+              >Sign in</a
+            >
+            <a class="utility-link" href="wishlist.html" data-nav-wishlist
+              >Saved <span class="count-badge" data-wishlist-count>0</span></a
+            >
+            <a class="utility-link" href="cart.html" data-nav-cart
+              >Cart <span class="count-badge" data-cart-count>0</span></a
+            >
+          </nav>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="container header-main-inner">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">L</span>
+            <span class="brand-text"
+              >Lumière<span class="brand-sub">Bistro</span></span
+            >
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="visually-hidden">Toggle navigation</span>
+          </button>
+          <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <ul class="nav-list">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="menu.html">Menu</a></li>
+              <li>
+                <a class="nav-link" href="order-online.html">Order Online</a>
+              </li>
+              <li>
+                <a class="nav-link" href="reservations.html">Reservations</a>
+              </li>
+              <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+              <li><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-more">
+                <details class="nav-details">
+                  <summary class="nav-link">More</summary>
+                  <ul class="nav-dropdown">
+                    <li><a href="special-offers.html">Special Offers</a></li>
+                    <li><a href="seasonal-menu.html">Seasonal Menu</a></li>
+                    <li><a href="dietary-menu.html">Dietary Menu</a></li>
+                    <li><a href="chef-specials.html">Chef's Specials</a></li>
+                    <li><a href="private-dining.html">Private Dining</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="catering.html">Catering</a></li>
+                    <li><a href="gift-cards.html">Gift Cards</a></li>
+                    <li><a href="loyalty.html">Lumière Circle</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li aria-current="page">Track order</li>
+            </ol>
+          </nav>
+          <h1 class="page-title">Track Your Order</h1>
+          <p class="page-lead">
+            Enter your order reference and the email used at checkout. Demo
+            build: use reference <strong>LB-2481</strong> to see a live example.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container tracking-layout">
+          <!-- Phase 2: intercept [data-tracking-form]; populate [data-tracking-container] from order data -->
+          <form
+            class="form tracking-form"
+            data-tracking-form
+            action="#"
+            novalidate
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="track-ref"
+                  >Order reference <span aria-hidden="true">*</span></label
+                >
+                <input
+                  class="form-input"
+                  type="text"
+                  id="track-ref"
+                  name="reference"
+                  placeholder="e.g. LB-2481"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="track-email"
+                  >Email used at checkout
+                  <span aria-hidden="true">*</span></label
+                >
+                <input
+                  class="form-input"
+                  type="email"
+                  id="track-email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+            <button class="btn btn--primary" type="submit">Track order</button>
+            <p class="form-status" data-tracking-message role="status"></p>
+          </form>
+
+          <div class="tracking-panel" data-tracking-container>
+            <div class="tracking-head">
+              <div>
+                <p class="eyebrow">Demo order</p>
+                <h2 class="section-title">Order LB-2481 · delivery</h2>
+              </div>
+              <p class="tracking-eta">
+                Estimated arrival
+                <strong data-tracking-eta>in ~15 minutes</strong>
+              </p>
+            </div>
+
+            <ol
+              class="tracking-steps"
+              data-tracking-steps
+              aria-label="Order progress"
+            >
+              <li class="tracking-step tracking-step--done">
+                <span class="tracking-step-marker" aria-hidden="true"></span>
+                <h3 class="tracking-step-title">Confirmed</h3>
+                <p class="tracking-step-time">
+                  18:42 · ticket received by the kitchen
+                </p>
+              </li>
+              <li class="tracking-step tracking-step--done">
+                <span class="tracking-step-marker" aria-hidden="true"></span>
+                <h3 class="tracking-step-title">In the kitchen</h3>
+                <p class="tracking-step-time">
+                  18:51 · fired fresh on the pass
+                </p>
+              </li>
+              <li
+                class="tracking-step tracking-step--current"
+                aria-current="step"
+              >
+                <span class="tracking-step-marker" aria-hidden="true"></span>
+                <h3 class="tracking-step-title">On the way</h3>
+                <p class="tracking-step-time">
+                  19:06 · boxed, sealed, cycling to you
+                </p>
+              </li>
+              <li class="tracking-step">
+                <span class="tracking-step-marker" aria-hidden="true"></span>
+                <h3 class="tracking-step-title">Delivered</h3>
+                <p class="tracking-step-time">
+                  Knock knock — reheating cards inside
+                </p>
+              </li>
+            </ol>
+
+            <div class="tracking-courier">
+              <div
+                class="map-placeholder map-placeholder--short"
+                data-map
+                data-map-label="Courier route to your address"
+                role="img"
+                aria-label="Map placeholder showing the courier's route to your address"
+              >
+                <p class="map-placeholder-label">
+                  Live map embed added in a later phase
+                </p>
+              </div>
+              <p class="form-hint">
+                Your courier tonight is <strong>Amine</strong> — the same person
+                who packs the boxes. Questions?
+                <a href="tel:+15550100187">+1 (555) 010-0187</a>.
+              </p>
+            </div>
+
+            <details class="accordion">
+              <summary class="accordion-summary">Order contents</summary>
+              <div class="accordion-body">
+                <ul class="summary-items">
+                  <li class="summary-item">
+                    <span>Cedar-Plank Salmon × 1</span><span>$32.00</span>
+                  </li>
+                  <li class="summary-item">
+                    <span>Valrhona Chocolate Tart × 1</span><span>$13.00</span>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <div class="info-card">
+            <h2 class="info-card-title">Placed an order just now?</h2>
+            <p>
+              The confirmation email contains your reference. You can also see a
+              sample of what a confirmed order looks like on the
+              <a href="order-confirmation.html">order confirmation page</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand--footer" href="index.html">
+              <span class="brand-mark" aria-hidden="true">L</span>
+              <span class="brand-text"
+                >Lumière<span class="brand-sub">Bistro</span></span
+              >
+            </a>
+            <p class="footer-tagline">
+              Seasonal cooking over open fire, a serious cellar, and hospitality
+              that lingers. A fictional bistro built for a front-end demo.
+            </p>
+            <ul class="footer-social" aria-label="Follow LUMIÈRE Bistro">
+              <li><a href="#" data-social-link="instagram">Instagram</a></li>
+              <li><a href="#" data-social-link="facebook">Facebook</a></li>
+              <li><a href="#" data-social-link="pinterest">Pinterest</a></li>
+            </ul>
+          </div>
+          <nav class="footer-col" aria-label="Explore">
+            <h2 class="footer-heading">Explore</h2>
+            <ul class="footer-list">
+              <li><a href="menu.html">Full menu</a></li>
+              <li><a href="order-online.html">Order online</a></li>
+              <li><a href="reservations.html">Reservations</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="special-offers.html">Special offers</a></li>
+              <li><a href="seasonal-menu.html">Seasonal menu</a></li>
+              <li><a href="dietary-menu.html">Dietary menu</a></li>
+              <li><a href="chef-specials.html">Chef's specials</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Services">
+            <h2 class="footer-heading">Services</h2>
+            <ul class="footer-list">
+              <li><a href="private-dining.html">Private dining</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="catering.html">Catering</a></li>
+              <li><a href="gift-cards.html">Gift cards</a></li>
+              <li><a href="loyalty.html">Lumière Circle</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="footer-col">
+            <h2 class="footer-heading">Visit</h2>
+            <address class="footer-contact">
+              <p>
+                48 Lantern Row<br />Harborfront Quarter<br />Alder Bay, AB 10214
+              </p>
+              <p>
+                <a href="tel:+15550100187">+1 (555) 010-0187</a><br /><a
+                  href="mailto:hello@lumierebistro.example"
+                  >hello@lumierebistro.example</a
+                >
+              </p>
+            </address>
+            <table class="hours-table hours-table--footer">
+              <tbody>
+                <tr>
+                  <th scope="row">Tue – Fri</th>
+                  <td>12:00 – 14:30 · 18:00 – 22:30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sat</th>
+                  <td>18:00 – 22:30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sun</th>
+                  <td>11:00 – 15:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mon</th>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav class="footer-col" aria-label="Company">
+            <h2 class="footer-heading">Company</h2>
+            <ul class="footer-list">
+              <li><a href="about.html">About us</a></li>
+              <li><a href="location.html">Find us</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="press.html">Press</a></li>
+              <li><a href="sustainability.html">Sustainability</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Account and legal">
+            <h2 class="footer-heading">Account &amp; legal</h2>
+            <ul class="footer-list">
+              <li><a href="login.html">Sign in</a></li>
+              <li><a href="register.html">Create account</a></li>
+              <li><a href="profile.html">My profile</a></li>
+              <li><a href="order-history.html">Order history</a></li>
+              <li><a href="order-tracking.html">Track an order</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of service</a></li>
+              <li><a href="refund-policy.html">Refund policy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-newsletter">
+          <div class="footer-newsletter-copy">
+            <h2 class="footer-heading">The Lumière Letter</h2>
+            <p>
+              Seasonal menus, chef's specials and first word on events. Once a
+              month — never more.
+            </p>
+          </div>
+          <form
+            class="footer-newsletter-form"
+            data-newsletter-form
+            action="#"
+            novalidate
+          >
+            <div class="form-group">
+              <label class="form-label visually-hidden" for="newsletter-email"
+                >Email address</label
+              >
+              <input
+                class="form-input"
+                type="email"
+                id="newsletter-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <button class="btn btn--light" type="submit">Subscribe</button>
+            <p class="form-hint" data-newsletter-message role="status"></p>
+          </form>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span data-year>2025</span> LUMIÈRE Bistro. All dishes, people and
+            addresses are fictional demo content.
+          </p>
+          <ul class="footer-legal">
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="refund-policy.html">Refunds</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="toast-container"
+      data-toast-container
+      role="status"
+      aria-live="polite"
+    ></div>
+    <!-- Phase 2: site JavaScript will be included here -->
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>

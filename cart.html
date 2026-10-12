@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Cart — LUMIÈRE Bistro</title>
+    <meta
+      name="description"
+      content="Review your LUMIÈRE Bistro order — adjust quantities, apply a promo code and continue to demo checkout."
+    />
+    <meta name="theme-color" content="#20362b" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="header-top">
+        <div class="container header-top-inner">
+          <p class="header-note">
+            Dinner Tue – Sat from 18:00 · Reservations
+            <a href="tel:+15550100187">+1 (555) 010-0187</a>
+          </p>
+          <nav class="utility-nav" aria-label="Account and cart">
+            <a class="utility-link" href="order-tracking.html">Track order</a>
+            <a class="utility-link" href="login.html" data-nav-account
+              >Sign in</a
+            >
+            <a class="utility-link" href="wishlist.html" data-nav-wishlist
+              >Saved <span class="count-badge" data-wishlist-count>0</span></a
+            >
+            <a
+              class="utility-link"
+              href="cart.html"
+              aria-current="page"
+              data-nav-cart
+              >Cart <span class="count-badge" data-cart-count>2</span></a
+            >
+          </nav>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="container header-main-inner">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">L</span>
+            <span class="brand-text"
+              >Lumière<span class="brand-sub">Bistro</span></span
+            >
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="visually-hidden">Toggle navigation</span>
+          </button>
+          <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <ul class="nav-list">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="menu.html">Menu</a></li>
+              <li>
+                <a class="nav-link" href="order-online.html">Order Online</a>
+              </li>
+              <li>
+                <a class="nav-link" href="reservations.html">Reservations</a>
+              </li>
+              <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+              <li><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-more">
+                <details class="nav-details">
+                  <summary class="nav-link">More</summary>
+                  <ul class="nav-dropdown">
+                    <li><a href="special-offers.html">Special Offers</a></li>
+                    <li><a href="seasonal-menu.html">Seasonal Menu</a></li>
+                    <li><a href="dietary-menu.html">Dietary Menu</a></li>
+                    <li><a href="chef-specials.html">Chef's Specials</a></li>
+                    <li><a href="private-dining.html">Private Dining</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="catering.html">Catering</a></li>
+                    <li><a href="gift-cards.html">Gift Cards</a></li>
+                    <li><a href="loyalty.html">Lumière Circle</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li aria-current="page">Cart</li>
+            </ol>
+          </nav>
+          <h1 class="page-title">Your Cart</h1>
+          <p class="page-lead">
+            Review your order, adjust quantities, then head to checkout. Demo
+            notice: contents shown here are sample data until Phase 2 connects
+            the cart.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container cart-layout" data-cart-container>
+          <div class="cart-main">
+            <h2 class="visually-hidden">Cart items</h2>
+            <!-- Phase 2: JS renders items into [data-cart-items]; the markup below is the static demo state and the row template -->
+            <ul class="cart-items" data-cart-items>
+              <li class="cart-item" data-cart-item="truffle-risotto">
+                <img
+                  class="cart-item-image"
+                  src="https://picsum.photos/seed/lumiere-truffle-risotto/200/200.jpg"
+                  alt=""
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
+                <div class="cart-item-info">
+                  <h3 class="cart-item-name">
+                    <a href="menu-item.html?id=truffle-risotto"
+                      >Black Truffle Risotto</a
+                    >
+                  </h3>
+                  <p class="cart-item-price">$27.00 each</p>
+                </div>
+                <div class="quantity" data-quantity-selector>
+                  <button
+                    class="quantity-btn"
+                    type="button"
+                    data-cart-decrease="truffle-risotto"
+                    aria-label="Decrease quantity of Black Truffle Risotto"
+                  >
+                    −
+                  </button>
+                  <input
+                    class="quantity-input"
+                    type="number"
+                    data-quantity-input
+                    value="1"
+                    min="1"
+                    max="20"
+                    inputmode="numeric"
+                    aria-label="Quantity of Black Truffle Risotto"
+                  />
+                  <button
+                    class="quantity-btn"
+                    type="button"
+                    data-cart-increase="truffle-risotto"
+                    aria-label="Increase quantity of Black Truffle Risotto"
+                  >
+                    +
+                  </button>
+                </div>
+                <p class="cart-item-total" data-cart-line-total>$27.00</p>
+                <button
+                  class="cart-remove"
+                  type="button"
+                  data-cart-remove="truffle-risotto"
+                  aria-label="Remove Black Truffle Risotto from cart"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      d="M6 6l12 12M18 6L6 18"
+                    />
+                  </svg>
+                  <span aria-hidden="true">Remove</span>
+                </button>
+              </li>
+
+              <li class="cart-item" data-cart-item="elderflower-spritz">
+                <img
+                  class="cart-item-image"
+                  src="https://picsum.photos/seed/lumiere-elderflower-spritz/200/200.jpg"
+                  alt=""
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
+                <div class="cart-item-info">
+                  <h3 class="cart-item-name">
+                    <a href="menu-item.html?id=elderflower-spritz"
+                      >Elderflower Spritz</a
+                    >
+                  </h3>
+                  <p class="cart-item-price">$14.00 each</p>
+                </div>
+                <div class="quantity" data-quantity-selector>
+                  <button
+                    class="quantity-btn"
+                    type="button"
+                    data-cart-decrease="elderflower-spritz"
+                    aria-label="Decrease quantity of Elderflower Spritz"
+                  >
+                    −
+                  </button>
+                  <input
+                    class="quantity-input"
+                    type="number"
+                    data-quantity-input
+                    value="2"
+                    min="1"
+                    max="20"
+                    inputmode="numeric"
+                    aria-label="Quantity of Elderflower Spritz"
+                  />
+                  <button
+                    class="quantity-btn"
+                    type="button"
+                    data-cart-increase="elderflower-spritz"
+                    aria-label="Increase quantity of Elderflower Spritz"
+                  >
+                    +
+                  </button>
+                </div>
+                <p class="cart-item-total" data-cart-line-total>$28.00</p>
+                <button
+                  class="cart-remove"
+                  type="button"
+                  data-cart-remove="elderflower-spritz"
+                  aria-label="Remove Elderflower Spritz from cart"
+                >
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      d="M6 6l12 12M18 6L6 18"
+                    />
+                  </svg>
+                  <span aria-hidden="true">Remove</span>
+                </button>
+              </li>
+            </ul>
+
+            <!-- Phase 2: shown when the cart has no items; hide the list above -->
+            <div class="cart-empty" data-cart-empty hidden>
+              <h2 class="section-title">Your cart is empty</h2>
+              <p>
+                Nothing in the bag yet. The risotto is a very good place to
+                start.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn--primary" href="order-online.html"
+                  >Browse the menu</a
+                >
+                <a class="btn btn--outline" href="wishlist.html"
+                  >View saved dishes</a
+                >
+              </div>
+            </div>
+
+            <div class="cart-foot">
+              <a class="btn btn--ghost" href="order-online.html"
+                >← Continue shopping</a
+              >
+              <button class="btn btn--ghost" type="button" data-cart-clear>
+                Clear cart
+              </button>
+            </div>
+          </div>
+
+          <aside class="cart-summary" aria-labelledby="cart-summary-title">
+            <div class="cart-summary-inner">
+              <h2 class="info-card-title" id="cart-summary-title">
+                Order summary
+              </h2>
+
+              <form class="cart-promo" data-promo-form action="#" novalidate>
+                <div class="form-group">
+                  <label class="form-label" for="promo-code">Promo code</label>
+                  <div class="search-field">
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="promo-code"
+                      name="promo"
+                      data-promo-input
+                      placeholder="e.g. LUMIERE10"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <button class="btn btn--outline btn--small" type="submit">
+                  Apply
+                </button>
+                <p class="form-hint" data-promo-message role="status"></p>
+              </form>
+
+              <dl class="cart-totals">
+                <div class="cart-total-row">
+                  <dt>Subtotal</dt>
+                  <dd data-cart-subtotal>$55.00</dd>
+                </div>
+                <div class="cart-total-row">
+                  <dt>Delivery</dt>
+                  <dd data-cart-delivery>$6.00</dd>
+                </div>
+                <div class="cart-total-row">
+                  <dt>Estimated tax (8%)</dt>
+                  <dd data-cart-tax>$4.40</dd>
+                </div>
+                <div class="cart-total-row cart-total-row--grand">
+                  <dt>Total</dt>
+                  <dd data-cart-total>$65.40</dd>
+                </div>
+              </dl>
+              <p class="form-hint">
+                Free delivery on orders over $60 — you're $5.00 away.
+              </p>
+
+              <a
+                class="btn btn--primary btn--large btn--block"
+                href="checkout.html"
+                >Proceed to checkout</a
+              >
+              <p class="form-hint">
+                Demo checkout — no real payment is processed at any stage.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand brand--footer" href="index.html">
+              <span class="brand-mark" aria-hidden="true">L</span>
+              <span class="brand-text"
+                >Lumière<span class="brand-sub">Bistro</span></span
+              >
+            </a>
+            <p class="footer-tagline">
+              Seasonal cooking over open fire, a serious cellar, and hospitality
+              that lingers. A fictional bistro built for a front-end demo.
+            </p>
+            <ul class="footer-social" aria-label="Follow LUMIÈRE Bistro">
+              <li><a href="#" data-social-link="instagram">Instagram</a></li>
+              <li><a href="#" data-social-link="facebook">Facebook</a></li>
+              <li><a href="#" data-social-link="pinterest">Pinterest</a></li>
+            </ul>
+          </div>
+          <nav class="footer-col" aria-label="Explore">
+            <h2 class="footer-heading">Explore</h2>
+            <ul class="footer-list">
+              <li><a href="menu.html">Full menu</a></li>
+              <li><a href="order-online.html">Order online</a></li>
+              <li><a href="reservations.html">Reservations</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="special-offers.html">Special offers</a></li>
+              <li><a href="seasonal-menu.html">Seasonal menu</a></li>
+              <li><a href="dietary-menu.html">Dietary menu</a></li>
+              <li><a href="chef-specials.html">Chef's specials</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Services">
+            <h2 class="footer-heading">Services</h2>
+            <ul class="footer-list">
+              <li><a href="private-dining.html">Private dining</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="catering.html">Catering</a></li>
+              <li><a href="gift-cards.html">Gift cards</a></li>
+              <li><a href="loyalty.html">Lumière Circle</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </nav>
+          <div class="footer-col">
+            <h2 class="footer-heading">Visit</h2>
+            <address class="footer-contact">
+              <p>
+                48 Lantern Row<br />Harborfront Quarter<br />Alder Bay, AB 10214
+              </p>
+              <p>
+                <a href="tel:+15550100187">+1 (555) 010-0187</a><br /><a
+                  href="mailto:hello@lumierebistro.example"
+                  >hello@lumierebistro.example</a
+                >
+              </p>
+            </address>
+            <table class="hours-table hours-table--footer">
+              <tbody>
+                <tr>
+                  <th scope="row">Tue – Fri</th>
+                  <td>12:00 – 14:30 · 18:00 – 22:30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sat</th>
+                  <td>18:00 – 22:30</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sun</th>
+                  <td>11:00 – 15:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mon</th>
+                  <td>Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <nav class="footer-col" aria-label="Company">
+            <h2 class="footer-heading">Company</h2>
+            <ul class="footer-list">
+              <li><a href="about.html">About us</a></li>
+              <li><a href="location.html">Find us</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="press.html">Press</a></li>
+              <li><a href="sustainability.html">Sustainability</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Account and legal">
+            <h2 class="footer-heading">Account &amp; legal</h2>
+            <ul class="footer-list">
+              <li><a href="login.html">Sign in</a></li>
+              <li><a href="register.html">Create account</a></li>
+              <li><a href="profile.html">My profile</a></li>
+              <li><a href="order-history.html">Order history</a></li>
+              <li><a href="order-tracking.html">Track an order</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="terms.html">Terms of service</a></li>
+              <li><a href="refund-policy.html">Refund policy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-newsletter">
+          <div class="footer-newsletter-copy">
+            <h2 class="footer-heading">The Lumière Letter</h2>
+            <p>
+              Seasonal menus, chef's specials and first word on events. Once a
+              month — never more.
+            </p>
+          </div>
+          <form
+            class="footer-newsletter-form"
+            data-newsletter-form
+            action="#"
+            novalidate
+          >
+            <div class="form-group">
+              <label class="form-label visually-hidden" for="newsletter-email"
+                >Email address</label
+              >
+              <input
+                class="form-input"
+                type="email"
+                id="newsletter-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <button class="btn btn--light" type="submit">Subscribe</button>
+            <p class="form-hint" data-newsletter-message role="status"></p>
+          </form>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span data-year>2025</span> LUMIÈRE Bistro. All dishes, people and
+            addresses are fictional demo content.
+          </p>
+          <ul class="footer-legal">
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="refund-policy.html">Refunds</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="toast-container"
+      data-toast-container
+      role="status"
+      aria-live="polite"
+    ></div>
+    <!-- Phase 2: site JavaScript will be included here -->
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>

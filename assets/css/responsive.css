@@ -1,0 +1,361 @@
+@charset "UTF-8";
+/* ==========================================================================
+   LUMIÈRE Bistro — responsive.css
+   Mobile-first breakpoint layer. Base (single-column) styles live in
+   style.css / components.css; this file progressively enhances upward.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. Overflow safety — no horizontal scrolling at any width
+   -------------------------------------------------------------------------- */
+html,
+body {
+  overflow-x: clip;
+}
+
+.dish-card,
+.dish-card-head,
+.dish-detail-info,
+.cart-item,
+.cart-item-info,
+.event-card,
+.event-card-body,
+.summary-item,
+.menu-row,
+.offer-card,
+.info-card,
+.quote-card,
+.room-card,
+.tracking-step,
+.hero-content,
+.hero-media,
+.cta-band-content,
+.reservation-aside,
+.confirmation-main,
+.confirmation-aside,
+.order-main {
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   1. Small-screen adjustments (phones)
+   -------------------------------------------------------------------------- */
+@media (max-width: 759px) {
+  .header-top {
+    font-size: 0.75rem;
+  }
+  .header-note {
+    display: none;
+  }
+  .utility-nav {
+    gap: 0.35rem 0.9rem;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Quick reservation: stacked, full-width controls */
+  .quick-reserve {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quick-reserve .form-group {
+    flex: 1 1 auto;
+  }
+  .quick-reserve .btn {
+    width: 100%;
+  }
+
+  /* Hero floating card tightens over the image */
+  .hero-card {
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0.8rem 1.1rem;
+  }
+  .hero-card-title {
+    font-size: 1rem;
+  }
+
+  /* Events stack the date tile above the copy */
+  .event-card {
+    flex-direction: column;
+  }
+  .event-date {
+    width: 4.25rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  /* Lightbox arrows move to the bottom corners */
+  .lightbox-prev,
+  .lightbox-next {
+    top: auto;
+    bottom: 1.1rem;
+    transform: none;
+  }
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    transform: scale(1.06);
+  }
+
+  /* Sticky sidebars become normal flow on small screens */
+  .cart-summary-inner,
+  .order-cart-inner {
+    position: static;
+  }
+
+  /* Toasts span the width */
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.9rem;
+    max-width: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Mobile navigation
+   The delivered HTML works without JavaScript: below 880px the nav list
+   wraps under the brand and the "More" <details> opens natively.
+   The .nav-ready / .nav-open rules are inert hooks that Phase 3 JS can
+   activate by adding those classes to .site-header (hamburger behaviour)
+   — they have zero effect until then.
+   -------------------------------------------------------------------------- */
+@media (max-width: 879px) {
+  .header-main-inner {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  .site-nav {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .nav-list {
+    gap: 0.1rem 1.1rem;
+    margin-top: 0.55rem;
+    padding-block: 0.5rem 0.65rem;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .nav-link {
+    padding: 0.55rem 0.15rem;
+  }
+
+  /* "More" dropdown becomes an inline indented panel */
+  .nav-dropdown {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin: 0.25rem 0 0.5rem 1rem;
+    padding: 0.25rem 0 0.25rem 0.35rem;
+    background: transparent;
+    border: 0;
+    border-left: 2px solid var(--color-gold);
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .nav-details[open] .nav-dropdown {
+    display: block;
+  }
+
+  /* Phase 3 opt-in hooks */
+  .site-header.nav-ready .nav-toggle {
+    display: inline-flex;
+  }
+  .site-header.nav-ready .site-nav {
+    display: none;
+  }
+  .site-header.nav-ready.nav-open .site-nav {
+    display: block;
+    flex-basis: 100%;
+    animation: nav-drop var(--transition) var(--ease-out);
+  }
+}
+
+@keyframes nav-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. ≥ 560px — large phones / small tablets
+   -------------------------------------------------------------------------- */
+@media (min-width: 560px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-newsletter {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. ≥ 640px — tablets portrait
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. ≥ 760px — tablets landscape
+   -------------------------------------------------------------------------- */
+@media (min-width: 760px) {
+  /* Cart rows become a stable five-column grid */
+  .cart-item {
+    display: grid;
+    grid-template-columns: 4.75rem minmax(0, 1fr) auto auto auto;
+    align-items: center;
+    gap: 1.1rem;
+  }
+  .cart-item-total {
+    margin-left: 0;
+    text-align: right;
+  }
+  .cart-remove {
+    justify-self: end;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. ≥ 960px — laptops
+   -------------------------------------------------------------------------- */
+@media (min-width: 960px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-8);
+  }
+
+  /* Dish detail: gallery beside info */
+  .dish-detail-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  /* Two-column commerce layouts */
+  .cart-layout {
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  }
+  .checkout-layout {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  }
+  .confirmation-layout {
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  }
+  .reservation-layout {
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+  }
+  .order-layout {
+    grid-template-columns: minmax(0, 1fr) 21rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. ≥ 1024px — hero becomes two-column
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: var(--space-9);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. ≥ 1080px — large desktop
+   -------------------------------------------------------------------------- */
+@media (min-width: 1080px) {
+  .grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. ≥ 1280px — wide desktop: wider container, larger root type
+   -------------------------------------------------------------------------- */
+@media (min-width: 1280px) {
+  :root {
+    --container-max: 1260px;
+  }
+
+  html {
+    font-size: 106.25%; /* 17px — fluid typography scales with rem everywhere */
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.35fr 1fr 1.1fr;
+  }
+  .footer-brand {
+    grid-column: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. Touch devices — comfortable hit targets
+   -------------------------------------------------------------------------- */
+@media (hover: none) {
+  .btn,
+  .chip,
+  .quantity-btn,
+  .utility-link,
+  .nav-link,
+  .accordion-summary,
+  .gallery-trigger,
+  .cart-remove {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn {
+    min-height: 44px;
+  }
+  .quantity-btn {
+    width: 2.9rem;
+    height: 2.9rem;
+  }
+  .cart-remove {
+    min-height: 44px;
+  }
+  .gallery-trigger {
+    cursor: pointer;
+  }
+}
